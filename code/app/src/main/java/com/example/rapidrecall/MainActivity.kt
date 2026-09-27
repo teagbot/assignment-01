@@ -17,10 +17,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        val gameLog = GameLog()
+        val stats = Stats()
         setContent {
             RapidRecallTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     RapidRecallScreen(
+                        results = gameLog.results,
+                        stats = stats,
+                        onAddResult = { gameLog.addResult(it); stats.addGame((it.getCorrect())) },
                         modifier = Modifier.padding(innerPadding)
                     )
                 }

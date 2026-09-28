@@ -1,26 +1,18 @@
 package com.example.rapidrecall
 
-class Stats {
-    private var totalGames = 0
-    private var totalWins = 0
+data class Stats(
+    val totalGames: Int,
+    val totalWins: Int,
+) {
 
-    fun addGame(win: Boolean) {
-        totalGames++
-        if (win) totalWins++
+    val winPercent: Float
+        get() = if (totalGames == 0) 0f else totalWins * 100f / totalGames
+
+    companion object {
+        fun from(results: List<Result>) = Stats(
+            totalGames = results.size,
+            totalWins = results.count { it.correct }
+        )
     }
-
-    fun getTotalGames(): Int {
-        return totalGames
-    }
-
-    fun getTotalWins(): Int {
-        return totalWins
-    }
-
-    fun getWinPercent(): Float {
-        if (totalGames == 0) return 0.0F
-        return ((totalWins.toFloat()/totalGames.toFloat())*100.0F)
-    }
-
 
 }

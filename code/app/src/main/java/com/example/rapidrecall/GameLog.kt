@@ -8,6 +8,9 @@ class GameLog {
     val results: List<Result>
         get() = _results
 
+    val stats: Stats
+        get() = Stats.from(_results)
+
     fun addResult(result: Result) {
         _results.add(result)
     }

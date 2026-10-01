@@ -1,5 +1,6 @@
 package com.example.rapidrecall
 
+// user stats derived from past games
 data class Stats(
     val totalGames: Int,
     val totalWins: Int,

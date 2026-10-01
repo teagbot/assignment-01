@@ -12,6 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+// General purpose buttons
 @Composable
 fun PrimaryButton(
     text: String,
@@ -35,6 +36,7 @@ fun PrimaryButton(
     }
 }
 
+// Buttons used to select tabs
 @Composable
 fun TabButton(
     label: String,

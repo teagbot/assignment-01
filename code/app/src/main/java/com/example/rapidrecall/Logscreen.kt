@@ -17,6 +17,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+// Lists results that come from a list
 @Composable
 fun LogScreen(
     results: List<Result>
@@ -36,6 +37,7 @@ fun LogScreen(
     }
 }
 
+// Row to be displayed as part of lazy column in LogScreen composable function
 @Composable
 private fun ResultRow(result: Result) {
     Row(

@@ -42,6 +42,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
 
+// Main screen: calls other composable functions to display certain parts of the game
 @Composable
 fun PlayScreen(viewModel: GameViewModel) {
     Column {
@@ -78,6 +79,7 @@ fun PlayScreen(viewModel: GameViewModel) {
     }
 }
 
+// Main game box to display sequence, guess, result
 @Composable
 fun GameField(
     phase: GamePhase,
@@ -112,6 +114,7 @@ fun GameField(
     }
 }
 
+// fun animation to play before displaying sequence
 @Composable
 private fun CircleCountDown(onFinished: () -> Unit) {
     var greenCount by remember { mutableIntStateOf(0) }
@@ -142,6 +145,7 @@ private fun CircleCountDown(onFinished: () -> Unit) {
     }
 }
 
+// Display the sequence. Speed is determined by constants in Sequence.kt
 @Composable
 private fun DisplaySequence(
     sequence: String,
@@ -162,6 +166,8 @@ private fun DisplaySequence(
     }
 }
 
+// Get the user input. Only allows digits.
+// Does not check if the entered sequence is the correct length
 @Composable
 private fun GuessInput(
     onSubmit: (String) -> Unit
@@ -193,6 +199,7 @@ private fun GuessInput(
     }
 }
 
+// Shows the result
 @Composable
 fun ResultSummary(
     result: Result,
@@ -209,6 +216,7 @@ fun ResultSummary(
     )
 }
 
+// Allows the user to select the length of the sequence.
 @Composable
 private fun LengthSelector(
     length: Int,

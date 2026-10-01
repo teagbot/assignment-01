@@ -1,5 +1,6 @@
 package com.example.rapidrecall
 
+// Stores information related to a result
 data class Result (
     val target: String,
     val guess: String,

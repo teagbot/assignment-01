@@ -2,6 +2,7 @@ package com.example.rapidrecall
 
 import androidx.compose.runtime.mutableStateListOf
 
+// Stores a list of results, as well as stats for the Stats class to derive from
 class GameLog {
     private val _results = mutableStateListOf<Result>()
 

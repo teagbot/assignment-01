@@ -1,5 +1,6 @@
 package com.example.rapidrecall
 
+// Contains the possible states of the game. Passes necessary information.
 sealed interface GamePhase {
     data object Idle : GamePhase
     data class Countdown(val target: String) : GamePhase

@@ -8,6 +8,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 
+// Manages the current phase and game information such as sequence length, sequence, guess, etc
 class GameViewModel : ViewModel() {
     val gameLog = GameLog()
 

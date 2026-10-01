@@ -49,11 +49,14 @@ import java.util.Date
 import java.util.Locale
 import kotlin.compareTo
 
+// tabs for the user to switch between
 enum class AppTab(val label: String) {
     PLAY("Play"),
     STATS("Stats"),
     LOG("Log")
 }
+
+// controls which screen is currently displayed based on user input
 @Composable
 fun RapidRecallScreen (
     viewModel: GameViewModel,

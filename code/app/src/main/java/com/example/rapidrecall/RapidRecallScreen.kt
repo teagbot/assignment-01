@@ -62,7 +62,9 @@ fun RapidRecallScreen (
     var selectedTab by rememberSaveable { mutableStateOf(AppTab.PLAY)}
 
 
+
     Column(modifier = Modifier.fillMaxSize()) {
+        Spacer(modifier = Modifier.height(24.dp))
         Row(
             modifier = Modifier.fillMaxWidth(),
         ) {

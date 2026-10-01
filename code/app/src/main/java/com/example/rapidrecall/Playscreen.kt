@@ -127,6 +127,7 @@ private fun CircleCountDown(onFinished: () -> Unit) {
                         color = if (index < greenCount) Color.Green else Color.Red,
                         shape = CircleShape
                     )
+                    .border(2.dp, Color.Black, CircleShape)
             )
         }
     }

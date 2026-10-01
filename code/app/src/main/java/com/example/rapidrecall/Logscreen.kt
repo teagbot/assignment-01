@@ -64,4 +64,4 @@ private fun ResultRow(result: Result) {
     }
 }
 
-private fun formatTimestamp(millis: Long): String = SimpleDateFormat("yyyy-MM=dd HH:mm:ss", Locale.getDefault()).format(Date(millis))
+private fun formatTimestamp(millis: Long): String = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date(millis))
